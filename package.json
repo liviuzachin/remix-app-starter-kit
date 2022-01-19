@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:css && remix build",
     "build:css": "tailwindcss -i ./app/styles/tailwind.css -o ./app/styles/app.css --minify",
-    "dev": "concurrently \"npm run dev:css\" \"node -r dotenv/config node_modules/.bin/remix dev\"",
+    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
     "dev:css": "tailwindcss -i ./app/styles/tailwind.css -o ./app/styles/app.css --watch",
     "postinstall": "remix setup node",
     "start": "remix-serve build"
@@ -32,8 +32,10 @@
     "@tailwindcss/typography": "^0.5.0",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
+    "autoprefixer": "^10.4.2",
     "concurrently": "^7.0.0",
     "daisyui": "^1.24.3",
+    "postcss": "^8.4.5",
     "tailwindcss": "^3.0.15",
     "typescript": "^4.1.2"
   },
